@@ -17,8 +17,8 @@ Before we run the algorithm, let's familiar with the parameters of this algorith
 | Parameter | Type | Default value |  Details | 
 | --- | --- | --- |  --- |  
 | ``--method`` | string | ``gradient_descent`` |There are 5 optimization methods available: ``gradient_descent``, ``adam``, ``bfgs``, ``lbfgs``,``newton``|
-| ``--n`` | int | ``1`` |  The level of the initial mesh elements.(Not available for the algorithm that without mesh adaptaion) |
-| ``--target`` | float | ``1000.0`` | The target metric complexity. |
+| ``--n`` | int | ``1`` |  The level of the initial mesh elements. |
+| ``--target`` | float | ``1000.0`` | The target metric complexity. (Not available for the algorithm that without mesh adaptaion) |
 | ``--maxiter`` | int | ``100`` | The maximum of iterations. |
 | ``--gtol`` | float | ``1.0e-05`` | The tolerance of gradient of objective function values. |
 | ``--lr`` | float | For ``gradient_descent``, the default value is ``0.01``. For the other four methods, the default value is ``1``.  | The initial step length. |
@@ -29,7 +29,11 @@ We also need to select the folder of the example we want to optimize, for the pa
 ## Run the algorithm
 
 Then, we run the setup file with mesh adaptation technique and optimization routine, here are options: ``opt_uniform.py``, ``opt_hessian.py``, and ``opt_go.py``. You also could choose the parameters you want. For example:  
+  
+  
 ``python3 opt_hessian.py heat_eq_constant_source --method bfgs --n 2 --lr 1``  
+  
+  
 The data will be saved for plotting.
 ## Plot convergence
 Also, we could run the two plotting files ``plot_different_optimization_methods.py`` and ``plot_different_mesh_adaptation.py`` based on the data saved before. These tow files will plot the objective function value against iteration numbers and CPU time.  
