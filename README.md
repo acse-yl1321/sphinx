@@ -3,7 +3,27 @@
 ## Algorithm
 This algorithm is an extension based on the algorithm writter by Dr Joseph Wallwork.
 Please click here to see the algorithm: https://github.com/pyroteus/opt_adapt  
-
+## Tree
+Here is the main directory tree of the algorithm in this paper:  
+```
+opt_adapt  
+├ demos  
+  ├ heat_eq_constant_source  
+       └ setup.py  
+  ├ heat_eq_variable_source  
+       └ setup.py  
+  ├ stokes  
+       └ setup.py  
+  ├ opt_go.py  
+  ├ opt_hessian.py  
+  ├ opt_uniform.py  
+  ├ plot_different_mesh_adaptation.py  
+  └ plot_different_optimization_methods.py  
+├ opt_adapt  
+  ├ matrix.py  
+  ├ opt.py  
+  └ utils.py  
+```
 ## Packages
 Here are packages needed in this algorithm: Firedrake, Pyroteus, Numpy, Time, matplotlib.
 
