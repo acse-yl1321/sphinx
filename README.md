@@ -1,5 +1,9 @@
 # Integrating adaptive meshing into a PDEconstrained optimisation model
 
+## Algorithm
+This algorithm is an extension based on the algorithm writter by Dr Joseph Wallwork.
+Please click here to see the algorithm: https://github.com/pyroteus/opt_adapt  
+
 ## Packages
 Here are packages needed in this algorithm: Firedrake, Pyroteus, Numpy, Time, matplotlib.
 
