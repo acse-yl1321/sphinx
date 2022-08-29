@@ -49,11 +49,24 @@ Before we run the algorithm, let's familiar with the parameters of this algorith
 We also need to select the folder of the example we want to optimize, for the paper, we focus on the heat equation with a constant source: ``heat_eq_constant_source``. In addition, we mentioned the examples ``heat_eq_variable_source`` and ``stokes`` in disscussion part.
 ## Run the algorithm
 
-Then, we run the setup file with mesh adaptation technique and optimization routine, here are options: ``opt_uniform.py``, ``opt_hessian.py``, and ``opt_go.py``. You also could change the vaules of parameters in above table. For example, run:  
+Then, we run the setup file with mesh adaptation technique and optimization routine, here are options: ``opt_uniform.py``, ``opt_hessian.py``, and ``opt_go.py``. You also could change the vaules of parameters in above table. Here are demonstrations of the heat equation example with different parameters:  
+
+``python3 opt_uniform.py heat_eq_constant_source``  
   
+ ![image](https://github.com/acse-yl1321/sphinx/blob/main/docs/Screenshot%202022-08-29%20202014.png)  
+  
+``python3 opt_uniform.py heat_eq_constant_source --method bfgs --lr 1 --disp 2``  
+  
+![image](https://github.com/acse-yl1321/sphinx/blob/main/docs/Screenshot%202022-08-29%20202043.png)  
   
 ``python3 opt_hessian.py heat_eq_constant_source --method bfgs --n 2 --lr 1``  
+
+![image](https://github.com/acse-yl1321/sphinx/blob/main/docs/Screenshot%202022-08-29%20202140.png)  
   
+``python3 opt_go.py heat_eq_constant_source --method lbfgs --target 3000 --lr 1``  
+  
+![image](https://github.com/acse-yl1321/sphinx/blob/main/docs/Screenshot%202022-08-29%20202424.png)  
+
   
 The data will be saved for plotting.
 ## Plot convergence
